@@ -1,0 +1,37 @@
+nav {
+    margin: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.gallery-section-photos {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+.gallery-section-title {
+    justify-content: flex-start;
+
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 15rem;
+}
