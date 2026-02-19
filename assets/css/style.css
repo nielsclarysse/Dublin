@@ -1,3 +1,56 @@
+/* =========================
+   Variables / Global
+   ========================= */
+
+:root {
+    --background: #F6F3EC;
+    --cards: #FFFEFB;
+    --text-primary: #1F2937;
+    --text-muted: #667085;
+    --primary: #0F7A53;
+    --secondary: #0E7A76;
+    --accent-brass: #B8893B;
+    --highlight: #E7F4EE;
+    --borders: #E6E1D7;
+    --footer: #EFE8DD;
+
+    --link: var(--primary);
+    --link-hover: #0B6242;
+    --focus-ring: rgba(15, 122, 83, 0.32);
+
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-display: "Space Grotesk", var(--font-sans);
+
+    --howest-logo: url("../images/howest-logo/howest-black.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0B1220;
+        --cards: #101C2F;
+        --text-primary: #F3F4F6;
+        --text-muted: #A7AFBD;
+        --primary: #22B07F;
+        --secondary: #2AA7A1;
+        --accent-brass: #D39A4A;
+        --highlight: #142845;
+        --borders: #223556;
+        --footer: #272d3a;
+
+        --link: var(--primary);
+        --link-hover: #2FD195;
+        --focus-ring: rgba(34, 176, 127, 0.40);
+
+        --howest-logo: url("../images/howest-logo/howest-wit-footer-en.svg");
+
+    }
+
+    .github-icon {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(299deg) brightness(102%) contrast(101%);
+    }
+}
+
 
 /* =========================
    Base / Global
@@ -48,196 +101,4 @@ nav a:hover {
     color: var(--link-hover);
     text-decoration: underline;
     cursor: pointer;
-}
-
-/* =========================
-   Home / Intro
-   ========================= */
-.home {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.home h1 {
-    margin: 2.5rem 0 0;
-}
-
-.home .subtext {
-    margin: 0 0 2.5rem;
-    color: var(--text-muted);
-}
-
-.intro {
-    max-width: 75%;
-    margin-bottom: 2.5rem;
-}
-
-/* =========================
-   Authors Grid
-   ========================= */
-.authors-info {
-    max-width: 75%;
-    margin-inline: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-@media (max-width: 1024px) {
-    .authors-info {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 640px) {
-    .authors-info {
-        max-width: 100%;
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================
-   Author Card
-   ========================= */
-.author-card {
-    width: 100%;
-    background: var(--cards);
-    border: 1px solid var(--borders);
-    border-radius: 18px;
-    overflow: hidden;
-
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
-    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-}
-
-.author-photo {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-.author-name,
-.short-intro {
-    padding-inline: 18px;
-}
-
-.author-name {
-    margin: 16px 0 6px;
-    font-size: 1.25rem;
-    font-weight: 750;
-    line-height: 1.2;
-}
-
-.short-intro {
-    margin: 0 0 18px;
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.6;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-}
-
-.author-card:hover {
-    transform: translateY(-3px);
-    border-color: color-mix(in srgb, var(--primary) 35%, var(--borders));
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.14);
-}
-
-.author-card:focus-within {
-    outline: 3px solid var(--focus-ring);
-    outline-offset: 3px;
-}
-
-@media (max-width: 480px) {
-    .author-photo {
-        height: 220px;
-    }
-
-    .author-name,
-    .short-intro {
-        padding-inline: 16px;
-    }
-}
-
-/* =========================
-   Author Social Buttons
-   ========================= */
-.author-social {
-    padding: 0 18px 18px;
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 38px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 650;
-    font-size: 0.95rem;
-
-    transition: transform 140ms ease;
-}
-
-.social-btn:hover {
-    transform: translateY(-1px);
-}
-
-.social-btn:focus-visible {
-    outline: 3px solid var(--focus-ring);
-    outline-offset: 2px;
-}
-
-.social-icon {
-    height: 80%;
-}
-
-@media (max-width: 480px) {
-    .author-social {
-        padding: 0 16px 16px;
-    }
-}
-
-/* =========================
-   Footer
-   ========================= */
-footer {
-    width: 100vw;
-    height: 5rem;
-    margin-top: 5rem;
-    padding-bottom: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border-top: 1px solid var(--borders);
-    color: var(--text-muted);
-
-    background: var(--footer) var(--howest-logo) no-repeat center right 2.5%;
-    background-size: 10%;
-}
-
-/* =========================
-   Utilities
-   ========================= */
-.hidden {
-    display: none;
 }
