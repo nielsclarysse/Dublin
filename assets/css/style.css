@@ -228,3 +228,7 @@ nav a:hover {
 }
 
 /*  End Of Authors */
+
+.hidden {
+    display: none;
+}
