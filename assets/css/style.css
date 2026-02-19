@@ -8,6 +8,7 @@
     --accent-brass: #B8893B;
     --highlight: #E7F4EE;
     --borders: #E6E1D7;
+    --footer: #EFE8DD;
 
     --link: var(--primary);
     --link-hover: #0B6242;
@@ -16,6 +17,8 @@
     --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", "Liberation Sans", sans-serif;
     --font-display: "Space Grotesk", var(--font-sans);
+
+    --howest-logo: url("../images/howest-black.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,10 +32,14 @@
         --accent-brass: #D39A4A;
         --highlight: #142845;
         --borders: #223556;
+        --footer: #272d3a;
 
         --link: var(--primary);
         --link-hover: #2FD195;
         --focus-ring: rgba(34, 176, 127, 0.40);
+
+        --howest-logo: url("../images/howest-wit-footer-en.svg");
+
     }
 
     .github-icon {
@@ -80,6 +87,7 @@ nav a {
 nav a:hover {
     color: var(--link-hover);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .home {
@@ -228,6 +236,25 @@ nav a:hover {
 }
 
 /*  End Of Authors */
+
+footer{
+    border-top: 1px solid var(--borders);
+    color: var(--text-muted);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    width: 100vw;
+    height: 5rem;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+
+    background: var(--footer) var(--howest-logo) no-repeat center right 2.5%;
+    background-size: 10%;
+}
 
 .hidden {
     display: none;
