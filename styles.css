@@ -1,0 +1,35 @@
+:root {
+    /* Light Mode */
+    --background: #F7F5EF;
+    --cards: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-muted: #6B7280;
+    --primary: #0B7A4B;
+    --secondary: #0F766E;
+    --accent-brass: #C6A15B;
+    --highlight: #E6F4EC;
+    --borders: #E5E7EB;
+
+    /* Optional: common semantics (helps keep components consistent) */
+    --link: var(--primary);
+    --link-hover: #095f3a; /* slightly darker emerald */
+    --focus-ring: rgba(11, 122, 75, 0.35);
+}
+
+/* Dark Mode (toggle with class or attribute; pick one approach) */
+[data-theme="dark"] {
+    --background: #0B1220;
+    --cards: #111C2E;
+    --text-primary: #F3F4F6;
+    --text-muted: #A1A8B3;
+    --primary: #1AA06D;
+    --secondary: #C8743A;
+    --accent-brass: #D94C7B;
+    --highlight: #15243A;
+    --borders: #22304A;
+
+    /* Optional: semantics */
+    --link: var(--primary);
+    --link-hover: #22c081;
+    --focus-ring: rgba(26, 160, 109, 0.4);
+}
