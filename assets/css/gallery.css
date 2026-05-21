@@ -34,4 +34,79 @@ nav {
 .gallery-item img {
     width: 100%;
     max-width: 15rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.gallery-item img:hover {
+    opacity: 0.85;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    opacity: 1;
+}
+
+.lightbox-close {
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.lightbox-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+}
+
+.logo {
+    display: block;
+    max-width: 5rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
 }
