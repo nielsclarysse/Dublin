@@ -16,3 +16,7 @@ function showHome() {
 }
 
 init();
+
+if (window.location.hash === "#blog") {
+    showBlog();
+}
