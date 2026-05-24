@@ -2,7 +2,10 @@
 function init() {
     document.querySelector(".nav-blog").addEventListener("click", showBlog);
     document.querySelectorAll(".nav-home").forEach(el => el.addEventListener("click", showHome));
-
+    document.querySelector(".logo-link").addEventListener("click", function(e) {
+        e.preventDefault();
+        showHome();
+    });
 }
 
 function showBlog() {
