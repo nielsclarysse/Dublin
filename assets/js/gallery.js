@@ -187,9 +187,9 @@ galleryData.forEach(section => {
     item.className = "gallery-item";
 
     const img = document.createElement("img");
+    img.setAttribute("loading", "lazy");
     img.src = src;
     img.alt = src.split("/").pop();
-    img.loading = "lazy";
     img.addEventListener("click", () => openLightbox(index));
 
     item.appendChild(img);
