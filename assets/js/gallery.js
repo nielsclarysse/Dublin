@@ -189,6 +189,7 @@ galleryData.forEach(section => {
     const img = document.createElement("img");
     img.src = src;
     img.alt = src.split("/").pop();
+    img.loading = "lazy";
     img.addEventListener("click", () => openLightbox(index));
 
     item.appendChild(img);
@@ -220,11 +221,19 @@ function closeLightbox() {
 function showPrev() {
   currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
   lightboxImg.src = allImages[currentIndex];
+  
+  // assuming the next image means i - 1 since the image at i + 1 was already rendered and therefore in cache
+  const nextIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+  const nextImg = new Image();
+  nextImg.src = allImages[nextIndex];
 }
 
 function showNext() {
   currentIndex = (currentIndex + 1) % allImages.length;
   lightboxImg.src = allImages[currentIndex];
+  const nextIndex = (currentIndex + 1) % allImages.length;
+  const nextImg = new Image();
+  nextImg.src = allImages[nextIndex];
 }
 
 document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
