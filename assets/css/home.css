@@ -198,26 +198,7 @@
     }
 }
 
-/* =========================
-   Footer
-   ========================= */
-footer {
-    width: 100vw;
-    height: 5rem;
-    margin-top: 5rem;
-    padding-bottom: 2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border-top: 1px solid var(--borders);
-    color: var(--text-muted);
-
-    background: var(--footer) var(--howest-logo) no-repeat center right 2.5%;
-    background-size: 10%;
-}
 
 /* =========================
    Utilities

@@ -104,3 +104,49 @@ nav a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    width: 100vw;
+    height: 5rem;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    border-top: 1px solid var(--borders);
+    color: var(--text-muted);
+
+    background: var(--footer) var(--howest-logo) no-repeat center right 2.5%;
+    background-size: 10%;
+}
+
+.footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.footer-logo {
+    height: 48px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
